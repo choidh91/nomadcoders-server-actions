@@ -1,7 +1,7 @@
 import { InputHTMLAttributes } from "react";
 
 interface InputProps {
-  children: React.ReactNode;
+  children?: React.ReactNode;
   name: string;
   errors?: string[];
 }
