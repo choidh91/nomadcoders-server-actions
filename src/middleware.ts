@@ -6,7 +6,6 @@ interface Routes {
 }
 
 const publicOnlyUrls: Routes = {
-  "/": true,
   "/log-in": true,
   "/create-account": true,
 };
@@ -24,7 +23,7 @@ export async function middleware(request: NextRequest) {
   } else {
     // 로그인 한 상태
     if (isPublicUrl) {
-      return NextResponse.redirect(new URL("/profile", request.url));
+      return NextResponse.redirect(new URL("/", request.url));
     }
   }
 }
