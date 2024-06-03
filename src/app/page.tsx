@@ -24,6 +24,9 @@ export default async function Home() {
   return (
     <main className="h-screen bg-neutral-100 items-center flex justify-center">
       <div className="flex flex-col">
+        <Link href="/tweets/add" className="btn">
+          Add Tweet
+        </Link>
         <TweetList tweets={tweets} />
       </div>
     </main>
