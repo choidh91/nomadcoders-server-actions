@@ -5,6 +5,7 @@ import Button from "@/components/button";
 import Input from "@/components/input";
 import { PASSWORD_MIN_LENGTH } from "@/lib/constants";
 import { useFormState } from "react-dom";
+import Link from "next/link";
 
 export default function LogIn() {
   const [state, dispatch] = useFormState(login, null);
@@ -29,6 +30,9 @@ export default function LogIn() {
         />
         <Button text="Log in" />
       </form>
+      <Link href="/create-account">
+        <button>create account</button>
+      </Link>
     </div>
   );
 }
